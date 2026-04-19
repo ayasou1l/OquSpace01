@@ -10,7 +10,6 @@ if (isset($_SESSION['user_id'])) {
 $error = '';
 $success = '';
 
-// --- Обработка Регистрации ---
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -45,7 +44,6 @@ if (isset($_POST['register'])) {
     }
 }
 
-// --- Обработка Входа ---
 if (isset($_POST['login'])) {
     $login = $_POST['login_username'];
     $password = $_POST['login_password'];

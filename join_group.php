@@ -5,7 +5,6 @@ include 'db.php';
 $user_id = $_SESSION['user_id'];
 $group_id = $_GET['group_id'];
 
-// проверка (чтобы не вступал 100 раз)
 $check = $conn->query("
     SELECT * FROM group_members 
     WHERE user_id=$user_id AND group_id=$group_id

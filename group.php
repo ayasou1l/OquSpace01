@@ -5,12 +5,12 @@ include 'db.php';
 $group_id = $_GET['id'];
 $user_id = $_SESSION['user_id'];
 
-// группа
+
 $group = $conn->query("
     SELECT * FROM groups_table WHERE id=$group_id
 ")->fetch_assoc();
 
-// сообщения
+
 $messages = $conn->query("
     SELECT gm.*, u.username 
     FROM group_messages gm
@@ -19,7 +19,6 @@ $messages = $conn->query("
     ORDER BY gm.id ASC
 ");
 
-// участники
 $members = $conn->query("
     SELECT u.username 
     FROM group_members gm
